@@ -217,30 +217,47 @@ div img[alt=men]{
     width: 400px;
     height: 600px;
 }
+/* ==========================================================
+   📱 ADAPTACIÓN PARA CELULARES (Mismos nombres tuyos)
+   ========================================================== */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 15px;
+    header {
+        height: auto; /* Permite que la barra roja se adapte si el menú se dobla */
     }
-    div {
+    nav {
+        flex-direction: column; /* Pone el logo arriba y los botones abajo */
         gap: 15px;
+        padding: 10px;
+    }
+    nav div {
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap; /* Evita que los botones se salgan de la pantalla */
+    }
+    section {
+        height: auto !important; /* ¡Clave! Rompe el 100vh para que el texto no se monte en la hamburguesa */
+        min-height: auto;
+        padding: 40px 15px;
     }
     #Inicio, #Menú, #Contacto {
-        flex-direction: column;
-        gap: 30px;
-        padding-top: 20px;
+        flex-direction: column; /* Alinea todo de arriba a abajo */
+        gap: 35px;
     }
     .info, .infoinicio {
         width: 95%;
         max-width: 400px;
-        height: auto;
+        height: auto; /* Hace que la tarjeta negra estire según el tamaño del texto */
+        padding: 20px;
     }
     .Clasica, .Sunrise, .Bbq, .doble {
         width: 90%;
-        height: auto;
+        max-width: 320px;
+        height: auto; /* Permite que la tarjeta roja crezca si el texto de la descripción es largo */
         gap: 15px;
+        padding: 20px 15px;
     }
     div img[alt=direccion], div img[alt=men] {
-        max-width: 90%;
+        max-width: 95%;
+        height: auto;
     }
 }
