@@ -222,42 +222,63 @@ div img[alt=men]{
    ========================================================== */
 @media (max-width: 768px) {
     header {
-        height: auto; /* Permite que la barra roja se adapte si el menú se dobla */
+        height: auto !important; /* Deja que la barra roja estire libremente */
+        padding: 10px 0;
     }
     nav {
-        flex-direction: column; /* Pone el logo arriba y los botones abajo */
-        gap: 15px;
-        padding: 10px;
+        flex-direction: column !important; /* Pone el logo arriba y los botones abajo */
+        height: auto !important; /* ¡CLAVE! Rompe los 60px para que el título no se tape */
+        gap: 10px !important;
     }
     nav div {
-        gap: 15px;
-        justify-content: center;
-        flex-wrap: wrap; /* Evita que los botones se salgan de la pantalla */
+        gap: 10px !important; /* Junta un poco más los botones para que entren bien */
+        justify-content: center !important;
     }
+    div a {
+        width: 85px !important; /* Achica un pelín los botones en celular */
+        height: 38px !important;
+        font-size: 11px !important;
+    }
+    
     section {
-        height: auto !important; /* ¡Clave! Rompe el 100vh para que el texto no se monte en la hamburguesa */
-        min-height: auto;
-        padding: 40px 15px;
+        height: auto !important; 
+        min-height: auto !important;
+        padding: 30px 15px !important;
     }
     #Inicio, #Menú, #Contacto {
-        flex-direction: column; /* Alinea todo de arriba a abajo */
-        gap: 35px;
+        flex-direction: column !important;
+        gap: 25px !important;
     }
-    .info, .infoinicio {
-        width: 95%;
-        max-width: 400px;
-        height: auto; /* Hace que la tarjeta negra estire según el tamaño del texto */
-        padding: 20px;
+    .info {
+        width: 95 !important;
+        max-width: 400px !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 20px !important;
     }
+    
+    /* ¡CLAVE! Corregimos el bloque blanco de la hamburguesa */
+    .infoinicio {
+        width: 95% !important;
+        max-width: 400px !important;
+        height: auto !important; 
+        min-height: auto !important; /* ¡Adiós al hueco gigante de 500px! */
+        padding: 15px !important; /* Margen limpio alrededor de la foto */
+    }
+    div img[alt=info] {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
     .Clasica, .Sunrise, .Bbq, .doble {
-        width: 90%;
-        max-width: 320px;
-        height: auto; /* Permite que la tarjeta roja crezca si el texto de la descripción es largo */
-        gap: 15px;
-        padding: 20px 15px;
+        width: 90% !important;
+        max-width: 320px !important;
+        height: auto !important;
+        gap: 15px !important;
+        padding: 20px 15px !important;
     }
     div img[alt=direccion], div img[alt=men] {
-        max-width: 95%;
-        height: auto;
+        max-width: 95% !important;
+        height: auto !important;
     }
 }
