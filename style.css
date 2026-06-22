@@ -217,3 +217,30 @@ div img[alt=men]{
     width: 400px;
     height: 600px;
 }
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    div {
+        gap: 15px;
+    }
+    #Inicio, #Menú, #Contacto {
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 20px;
+    }
+    .info, .infoinicio {
+        width: 95%;
+        max-width: 400px;
+        height: auto;
+    }
+    .Clasica, .Sunrise, .Bbq, .doble {
+        width: 90%;
+        height: auto;
+        gap: 15px;
+    }
+    div img[alt=direccion], div img[alt=men] {
+        max-width: 90%;
+    }
+}
