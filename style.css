@@ -2,6 +2,10 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
 }
 header{
     background-color: red;
@@ -20,14 +24,16 @@ nav{
     height: 60px;
 }
 h1{
-    color: black;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900; /* Letra ultra gruesa para el estilo Pub */
+    text-transform: uppercase;
 }
 div{
     display: flex;
     gap: 60px;
 }
-div a{
+nav div a{
     display: flex;
     flex-direction: column;
     color: black;
@@ -38,9 +44,15 @@ div a{
     height: 40px;
     width: 95px;
     border-radius: 10px;
+    font-weight: 600px;
+    font-size: 13px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
-div a:hover{
+nav div a:hover{
     background-color: red;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
 }
 div img{
     border-radius: 20px;
@@ -57,6 +69,7 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 section{
     width: 100%;
@@ -78,9 +91,10 @@ section{
     justify-content: center;
     align-items: center;
     width: 400px;
-    height: 500px;
+    height: auto;
+    min-height: 500px;
     gap: 10px;
-    padding: 10px;
+    padding: 25px;
     border-radius: 20px;
     color: black;
     border: 2px solid white;
@@ -91,57 +105,80 @@ section{
 }
 .info3{
     color:white;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 15px;
 }
 div img[alt=info]{
     width: 590px;
     height: 490px;
 }
 .infoinicio{
-    background-color: white;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 600px;
-    height: 500px;
+    height: auto;
     gap: 10px;
     padding: 10px;
     border-radius: 20px;
+    filter: drop-shadow(0 10px 20px rgba(255, 0, 0, 0.3));
 }
 #Menú{
     color: black;
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 20px;
     padding-top: 60px;
     align-items: center;
+    flex-wrap: wrap;            
+    gap: 20px;                  
+    max-width: 1300px;          
+    margin: 0 auto;
 }
 .Clasica{
     background-color: red;
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
-    gap: 10px;
-    height: 300px;
-    width: 300px;
-    padding: 10px;
-    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 15px;
+    height: 400px;
+    width: 280px;
+    padding: 20px;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 40px;
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Clasica:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.5);
 }
 div img[alt=clasica]{
-    width: 200px;
-    height: 300px;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
 }
 div button{
     background-color: black;
-    width: 80px;
-    height: 30px;
-    border: none;
+    width: 100px;
+    height: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 20px;
     padding: 6px;
     color: white;
+    font-weight: 700;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+div button:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 h3{
     color: white;
@@ -153,52 +190,169 @@ p{
     background-color: red;
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
-    gap: 10px;
-    height: 300px;
-    width: 300px;
-    padding: 10px;
-    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 15px;
+    height: 400px;
+    width: 280px;
+    padding: 20px;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 40px;
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Sunrise:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.5);
 }
 div img[alt=sunrise]{
-    width: 200px;
-    height: 300px;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
 }
 .Bbq{
     background-color: red;
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
-    gap: 10px;
-    height: 300px;
-    width: 300px;
-    padding: 10px;
-    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 15px;
+    height: 400px;
+    width: 280px;
+    padding: 20px;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 40px;
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Bbq:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.5);
 }
 div img[alt=bbq]{
-    width: 200px;
-    height: 300px;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
 }
 .doble{
     background-color: red;
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
-    gap: 10px;
-    height: 300px;
-    width: 300px;
-    padding: 10px;
-    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 15px;
+    height: 400px;
+    width: 280px;
+    padding: 20px;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 40px;
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.doble:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.5);
 }
 div img[alt=doble]{
-    width: 200px;
-    height: 300px;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+.pollo{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 15px;
+    height: 400px;
+    width: 280px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pollo:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.5);
+}
+div img[alt=pollo]{
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+.alitas{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 15px;
+    height: 400px;
+    width: 280px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.alitas:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.5);
+}
+div img[alt=alitas]{
+    width: 160px;
+    height: 160px;
+    object-fit: contain; 
+}
+.corona{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 15px;
+    height: 400px;
+    width: 280px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.corona:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.5);
+}
+div img[alt=corona]{
+    width: 160px;
+    height: 160px;
+    object-fit: contain; 
+}
+.huari{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 15px;
+    height: 400px;
+    width: 280px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.huari:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.5);
+}
+div img[alt=huari]{
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
 }
 #Contacto{
     color: black;
@@ -209,13 +363,26 @@ div img[alt=doble]{
     align-items: center;
 }
 
-div img[alt=direccion]{
-    width: 400px;
-    height: 600px;
+/* ✅ Controla que las imágenes de contacto tomen su tamaño real y respeten los enlaces */
+.tarjeta1 img, .tarjeta2 img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    border-radius: 20px; /* Redondea los flyers para emparejar con el diseño */
 }
-div img[alt=men]{
-    width: 400px;
-    height: 600px;
+/* Aplica la transición y el tamaño al enlace que está dentro del div */
+.tarjeta1 a, .tarjeta2 a {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border-radius: 20px; /* Para que la sombra respete los bordes redondeados */
+}
+
+/* El efecto hover ahora se activa al pasar sobre el enlace */
+.tarjeta1 a:hover, .tarjeta2 a:hover {
+    transform: scale(1.03) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 68, 0, 0.4);
 }
 /* ==========================================================
    📱 ADAPTACIÓN PARA CELULARES (Mismos nombres tuyos)
@@ -280,5 +447,112 @@ div img[alt=men]{
     div img[alt=direccion], div img[alt=men] {
         max-width: 95% !important;
         height: auto !important;
+    
     }
+    /* ==========================================
+       🔥 CORRECCIÓN DEFINITIVA PARA EL CONTACTO Y FOOTER
+       ========================================== */
+    
+    #Contacto {
+        height: auto !important;          /* Elimina de raíz el 100vh para que la sección crezca de forma natural */
+        min-height: auto !important;
+        display: flex !important;
+        flex-direction: column !important; /* Coloca un flyer debajo del otro */
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 40px !important;             /* Separa de forma limpia los dos flyers */
+        padding-top: 100px !important;    /* Espacio arriba para que no lo pise el menú de comidas */
+        padding-bottom: 60px !important;  /* Empuja el footer hacia abajo para que NO se encimen */
+    }
+
+    .tarjeta1, .tarjeta2 {
+        width: 100% !important;           /* Ocupa el ancho disponible en la pantalla del móvil */
+        height: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .tarjeta1 a, .tarjeta2 a {
+        display: block !important;
+        width: 85% !important;            /* Define un tamaño responsivo y elegante para el flyer */
+        max-width: 340px !important;      /* Evita que se deforme en pantallas medianas */
+        height: auto !important;
+    }
+
+    .tarjeta1 img, .tarjeta2 img {
+        width: 100% !important;           /* Forza a la imagen a rellenar el enlace de manera proporcional */
+        height: auto !important;          /* Mantiene el ratio original de tu diseño gráfico */
+        display: block !important;
+    }
+
+    footer {
+        clear: both !important;           /* Limpia cualquier elemento flotante residual */
+        margin-top: 20px !important;      /* Separa de forma limpia el fondo negro del footer de los flyers */
+    }
+}
+/* 1. Define el ancho de la barra lateral de scroll */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* 2. El fondo de la pista por donde se desliza la barra */
+::-webkit-scrollbar-track {
+    background: #000000; 
+}
+
+/* 3. La barra que se mueve (el indicador de posición) */
+::-webkit-scrollbar-thumb {
+    background: #ff0000; /* Color rojo de tu marca */
+    border-radius: 5px;   /* Bordes redondeados para la barra */
+}
+
+/* 4. Cambia de color cuando el usuario hace clic sobre ella */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; /* Un rojo más oscuro al interactuar */
+}
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Una línea divisoria ultra sutil */
+    margin-top: 40px;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.6); /* Texto blanco con transparencia para que sea discreto */
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+/* ==========================================================
+   🟢 ESTILOS PARA EL BOTÓN FLOTANTE DE WHATSAPP
+   ========================================================== */
+.whatsapp-btn {
+    position: fixed;   /* CLAVE: Hace que el botón se quede "congelado" en la pantalla aunque hagas scroll */
+    bottom: 25px;      /* Distancia desde el borde inferior de la pantalla */
+    right: 25px;       /* Distancia desde el borde derecho de la pantalla */
+    width: 60px;       /* Ancho del círculo verde */
+    height: 60px;      /* Alto del círculo verde */
+    background-color: #25d366; /* El color verde oficial de WhatsApp */
+    border-radius: 50%; /* Hace que el contenedor sea un círculo perfecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Le da una sombra negra para que resalte */
+    z-index: 1000;     /* Asegura que el botón flote por ENCIMA de todas las secciones */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hace que el efecto al pasar el mouse sea suave */
+}
+
+/* Efecto cuando pasas el cursor por encima del botón */
+.whatsapp-btn:hover {
+    transform: scale(1.1); /* Se agranda un 10% de forma fluida */
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); /* Su sombra se vuelve un resplandor verde */
+}
+
+/* Controla el tamaño del icono de WhatsApp que va adentro */
+.whatsapp-btn img {
+    width: 35px !important;
+    height: 35px !important;
 }
