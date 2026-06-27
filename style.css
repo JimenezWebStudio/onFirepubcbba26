@@ -490,6 +490,46 @@ div img[alt=huari]{
         clear: both !important;           /* Limpia cualquier elemento flotante residual */
         margin-top: 20px !important;      /* Separa de forma limpia el fondo negro del footer de los flyers */
     }
+    #Menú {
+        height: auto !important;          /* Permite que la sección crezca según la cantidad de hamburguesas */
+        padding: 40px 10px !important;
+        display: flex !important;
+        flex-direction: column !important; /* Alinea una tarjeta debajo de otra en celular */
+        align-items: center !important;
+    }
+
+    /* Afecta a TODAS tus tarjetas del menú por igual (Clasica, Sunrise, Bbq, doble, pollo, alitas, corona, huari) */
+    .Clasica, .Sunrise, .Bbq, .doble, .pollo, .alitas, .corona, .huari {
+        width: 90% !important;            /* Se adapta perfectamente al ancho de cualquier celular */
+        max-width: 320px !important;      /* Evita que se ensanche demasiado en pantallas medianas */
+        height: auto !important;          /* ¡CLAVE! Cambia de 400px a automático para que el texto respire */
+        padding: 25px 20px !important;    /* Espaciado interno uniforme */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 15px !important;             /* Mantiene una separación elegante entre foto, título y precio */
+    }
+
+    /* Normaliza TODAS las imágenes del menú para que midan exactamente igual en cualquier celular */
+    .Clasica img, .Sunrise img, .Bbq img, .doble img, .pollo img, .alitas img, .corona img, .huari img {
+        width: 170px !important;          /* Tamaño ideal y uniforme para la foto de la hamburguesa */
+        height: 170px !important;         /* Mantiene una caja perfecta */
+        object-fit: contain !important;   /* Evita que la foto se distorsione, estire o se vuelva un círculo */
+        border-radius: 0px !important;    /* Remueve bordes redondeados raros si no los necesitas en la comida */
+    }
+
+    /* Ajusta los textos dentro de las tarjetas */
+    #Menú h3 {
+        font-size: 18px !important;       /* Tipografía legible para el título del plato */
+        margin: 5px 0 !important;
+    }
+
+    #Menú p {
+        font-size: 14px !important;       /* Tamaño óptimo para la descripción de los ingredientes */
+        line-height: 1.4 !important;
+        margin-bottom: 5px !important;
+    }
 }
 /* 1. Define el ancho de la barra lateral de scroll */
 ::-webkit-scrollbar {
